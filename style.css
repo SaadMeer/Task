@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Zen+Dots&display=swap');
+
+:root {
+    --primary-color: #FD1640;
+    --primary-text-color: #EFEFEF;
+    --secondary-text-color: #DCDCDC;
+    /* #ED213A, #FD1640 */
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Zen Dots', sans-serif;
+    background-color: var(--black);
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    height: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--white);
+}
+
+ul {
+    /* list-style-type: none; */
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+p {
+    color: var(--white);
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Main Popular Css start */
+.main-site-container {}
+
+.main-Innersite-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    padding: 65px 10px;
+}
+
+.main-Innersite-container h2 {
+    color: var(--white);
+    font-family: Zen Dots;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+}
+
+.main-Innersite-container p {
+    color: var(--white);
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    padding-top: 32px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    padding-top: 65px;
+    z-index: 999;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item.small {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+.grid-item.large {
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+.grid-item.large2 {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.grid-item.large3 {
+    grid-row: span 2;
+    grid-column: span 3;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border: 1px solid var(--primary-color);
+    background-color: #fd164062;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    padding: 0px 0px 30px 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.overlay-text h4 {
+    color: var(--white);
+    font-family: Inter;
+    font-family: Zen Dots;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 0px;
+}
+
+.overlay-text p {
+    color: var(--white);
+    font-family: inter;
+    font-size: 14px;
+    font-style: normal;
+    text-align: left;
+    line-height: 0px;
+    font-weight: 500;
+}
+
+.overlay-text p span {
+    font-family: inter;
+    color: var(--primary-color);
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 0px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+}
+
+.grid-item:hover .overlay {
+    width: 90%;
+    height: 90%;
+    opacity: 1;
+}
+
+.zoom-image {
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover .zoom-image {
+    transform: scale(1.2);
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+
+.grid-item:hover .overlay-text {
+    display: flex;
+    opacity: 1;
+}
+
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.btn-1 {
+    color: var(--white);
+    font-family: inter;
+    font-size: 18px;
+    font-style: normal;
+    text-align: text;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid #FD1640;
+    background-color: #FD1640;
+    padding: 15px 40px;
+    margin-top: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-1:hover {
+    background-color: transparent;
+}
+
+.rightSpan-nft {
+    color: #FFF;
+    font-family: Zen Dots;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.rightSpan-nft-primary {
+    color: var(--primary-color);
+}
+
+.textNft-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    z-index: -1;
+}
+
+/* Main Popular Css end */
+
+/* Top List Css Start */
+.topListed-conatainer {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.topListed-conatainer h3 {
+    color: #FFF;
+    font-family: Zen Dots;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 30px 0px 0px 50px;
+}
+
+.topListed-conatainer h3 span {
+    color: var(--primary-color);
+}
+
+.topListedInner-Container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 80px;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+
+.topListed-cutted-div {
+    position: relative;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.bg-text {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    text-align: center;
+    padding-top: 30px;
+    z-index: -1;
+}
+
+.bg-text h6 {
+    color: #fd1640ce;
+    letter-spacing: 3px;
+    font-family: zen dots;
+    font-size: 40px;
+}
+
+.bg-text h6:last-child {
+    color: #fd1640ce;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.bg-text h6:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #00000054;
+    box-shadow: 0px 5px 10px #00000033;
+    z-index: 0;
+}
+
+.topListed-cutted-div img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nft-timmer-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.nft-timmer-div span {
+    color: #FFF;
+    font-family: Inter;
+    font-size: px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 3.08px;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    background-color: #FF000066;
+    color: var(--white);
+    z-index: 999;
+}
+
+.topListed-cutted-div:hover .nft-timmer-div {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 20px;
+}
+
+.box {
+    --b: 4px;
+    --s: 20px;
+    display: inline-block;
+    aspect-ratio: 1.5;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+}
+
+.box:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, #FD1640, #FD1640);
+    --g1: #000 var(--b), #0000 0 calc(100% - var(--b)), #000 0;
+    --g2: #0000 calc(0.707*var(--s)),
+        #000 0 calc(0.707*var(--s) + var(--b)),
+        #0000 0 calc(100% - 0.707*var(--s) - var(--b)),
+        #000 0 calc(100% - 0.707*var(--s)),
+        #0000 0;
+    -webkit-mask:
+        linear-gradient(45deg, var(--g2)),
+        linear-gradient(-45deg, var(--g2)),
+        linear-gradient(90deg, var(--g1)) 50%/100% calc(100% - 2*var(--s)) no-repeat,
+        linear-gradient(180deg, var(--g1)) 50%/calc(100% - 2*var(--s)) 100% no-repeat;
+
+}
+
+/* .custom-shape {
+    --b: 4px;
+    --s: 20px;
+    width: 300px;
+    display: inline-block;
+    aspect-ratio: 1.5;
+    position: relative;
+    z-index: 0;
+} */
+
+.custom-shape {
+    --border: 2px;
+    --slant: 0.7em;
+    --color: #FD1640;
+    font-size: 35px;
+    padding: 10px 10px 12px 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--color);
+    background:
+        linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%) top right,
+        linear-gradient(to top right, var(--color) 50%, #0000 50.1%) bottom left;
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    background-repeat: no-repeat;
+    box-shadow:
+        0 0 0 200px inset var(--s, #0000),
+        0 0 0 var(--border) inset var(--color);
+    clip-path:
+        polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+            100% 100%, var(--slant) 100%, 0 calc(100% - var(--slant)));
+    transition: color var(--t, 0.3s), background-size 0.3s;
+    cursor: pointer;
+}
+
+.custom-shape-inner-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+.custom-shape-inner-1 h5 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 0px 5px;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+}
+
+.custom-shape-inner-1 p {
+    color: #FFF;
+    font-family: inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    text-transform: capitalize;
+}
+
+.custom-shape-inner-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+    margin-top: 10px;
+}
+
+.custom-shape-inner-2 p {
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    text-transform: capitalize;
+}
+
+.custom-shape-inner-2 img {
+    margin: 0px 5px;
+}
+
+.explore-box {
+    background-image: url('./assets/imgs/NF T’S.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.explore-box h3 {
+    text-align: left;
+}
+
+.btn-2 {
+    color: var(--white);
+    font-family: inter;
+    font-size: 14px;
+    font-style: normal;
+    text-align: text;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid #FD1640;
+    background-color: #FD1640;
+    padding: 12px 30px;
+    margin-top: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-2:hover {
+    background-color: transparent;
+}
+
+/* Top List Css End */
+
+/* Road Map Css Start */
+.roadmap-conatainer {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.roadText-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.roadmap-conatainer h3 {
+    color: #FFF;
+    font-family: Zen Dots;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+.roadmap-conatainer h3 span {
+    color: var(--primary-color);
+}
+
+.roadText-center p {
+    color: var(--white);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: -20px;
+}
+
+
+.roadText-nft-container {
+    padding: 100px 0px;
+}
+
+.roadText-nft-box-line {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.roadmap-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 2px dotted var(--primary-color);
+    width: 2px;
+    height: 140vh;
+}
+
+.roadmap-line img {}
+
+.roadText-nft-box-content {
+    padding-left: 30px;
+    width: 100%;
+}
+
+.roadText-nft-box-content-container {
+    width: 100%;
+
+}
+
+.phase-div {
+    width: 500px;
+    text-align: left;
+    color: #FD1640;
+    font-family: Zen Dots;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: rgba(253, 22, 64, 0.30);
+    padding: 14px;
+}
+
+
+.roadmap-points-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FD1640;
+    margin-top: 35px;
+    padding: 18px 0px 18px 30px;
+    width: 100%;
+    position: relative;
+}
+
+.roadmap-points-div .imgcorner-vector {
+    position: absolute;
+    right: 0;
+    top: 0 !important;
+    margin: -10px -8px 0px 0px;
+}
+
+.roadmap-points-div ul {
+    padding-left: 20px;
+}
+
+.roadmap-points-div ul li {
+    color: var(--white);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.nft-img-div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 170px;
+    margin-top: -120px;
+}
+
+.nft-img-div .nft-circle {
+    position: absolute;
+    width: 300px;
+    z-index: -1;
+    animation: rotateInCircle 20s linear infinite;
+}
+
+@keyframes rotateInCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nft-img-div .circleFront-img {
+    position: absolute;
+    width: 200px;
+}
+
+.roadText-nft-box-content-2 {
+    margin-top: 40px;
+}
+
+.roadmap-points-div-2 {
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+    align-items: center;
+    background: #FD1640;
+    margin-top: 35px;
+    padding: 18px 0px 18px 30px;
+    width: 100%;
+    position: relative;
+}
+
+.phase-div-2 {
+    position: relative;
+    width: 500px;
+    text-align: left;
+    color: #FD1640;
+    font-family: Zen Dots;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: rgba(253, 22, 64, 0.30);
+    padding: 14px;
+    margin-left: 250px;
+}
+
+.nft-img-div-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -74px 120px 0px 100px;
+}
+
+.nft-img-div-2 .circleFront-img {}
+
+.roadText-nft-box-content-3 {
+    margin-top: 70px;
+}
+
+.nft-img-div-3 {
+    margin-top: -90px;
+}
+
+.roadText-nft-box-content-4 {
+    margin-top: 70px;
+}
+
+.nft-img-div-4 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -72px 120px 0px 100px;
+}
+
+/* Road Map Css End */
+
+
+/* Responsiveness start */
+@media only screen and (max-width: 1200px) {
+    .topListedInner-Container {
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .roadmap-line {
+        height: 160vh;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .roadText-nft-box-line {
+        width: 100%;
+        overflow: hidden;
+        padding: 40px 24px;
+    }
+
+    .phase-div {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .main-Innersite-container {
+        width: 100%;
+        margin: auto;
+        padding: 65px 10px;
+    }
+
+    .main-Innersite-container h2 {
+        font-size: 20px;
+    }
+
+    .main-Innersite-container p {
+        font-size: 12px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 30px;
+    }
+
+    .topListedInner-Container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 680px) {
+    .nft-img-div {
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+
+    .nft-img-div .circleFront-img {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .roadText-nft-box-line {
+        overflow: visible;
+        padding: 10px 5px;
+    }
+
+    .roadmap-points-div ul {
+        padding-left: 0px;
+    }
+
+    .nft-img-div {
+        margin-right: 30px;
+        margin-top: -7px;
+    }
+
+    .nft-img-div .circleFront-img {
+        width: 100px;
+    }
+
+    .phase-div-2 {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .roadmap-points-div-2 {
+        padding: 18px 0px 18px 0px;
+    }
+
+    .nft-img-div-2 {
+        margin: 41px 0px 0px 00px;
+        border: 1px solid yellow;
+    }
+
+    .roadmap-points-div-2 ul {
+        margin: 0px 3px 0px 55px;
+    }
+
+    .nft-img-div-2 .circleFront-img {
+        width: 120px;
+        margin-top: 10px;
+    }
+
+    
+
+    .phase-div-4 {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .roadmap-points-div-4 {
+        padding: 18px 0px 18px 0px;
+    }
+
+    .nft-img-div-4 {
+        margin: 41px 0px 0px 00px;
+        border: 1px solid yellow;
+    }
+
+    .roadmap-points-div-4 ul {
+        margin: 0px 3px 0px 55px;
+    }
+
+    .nft-img-div-4 .circleFront-img {
+        width: 120px;
+        margin-top: -35px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .topListedInner-Container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
